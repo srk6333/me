@@ -235,7 +235,11 @@ img {
 }
 
 .home__blob-img {
-  width: 360px;
+  width: 260px;
+  height: 260px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 10px solid var(--first-color);
 }
 .card {
   display: inline-block;
@@ -321,7 +325,12 @@ img {
 /* ===== SKILLS =====*/
 .skills__container {
   row-gap: 2rem;
-  text-align: center;
+  text-align: left;
+}
+
+.skills__container ul {
+  list-style: circle;
+  margin-left: 10px;
 }
 
 .skills__subtitle {
@@ -330,6 +339,11 @@ img {
 
 .skills__text {
   margin-bottom: var(--mb-4);
+}
+
+.skills__text a {
+  color: var(--font-semi);
+  text-decoration: underline;
 }
 
 .skills__data {
@@ -344,6 +358,13 @@ img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
 }
 
+.skills__info{
+  text-align: left;
+}
+.skills__info ul {
+  list-style: circle;
+  margin-left: 10px;
+}
 .skills__icon {
   font-size: 2rem;
   margin-right: var(--mb-2);
@@ -448,7 +469,14 @@ img {
     row-gap: 2rem;
   }
   .home__img {
+    /* width: 200px; */
+    display: flex;
+    justify-content: center;
+  }
+
+  .home__blob-img {
     width: 200px;
+    height: 200px;
   }
 }
 
@@ -467,8 +495,12 @@ img {
     margin-right: var(--mb-4);
   }
   .home__img {
-    width: 300px;
+    width: 200px;
     bottom: 25%;
+  }
+  .home__blob-img {
+    width: 200px;
+    height: 200px;
   }
   .about__container {
     grid-template-columns: repeat(2, 1fr);
@@ -530,8 +562,12 @@ img {
     padding: 8rem 0 2rem;
   }
   .home__img {
-    width: 400px;
+    width: 300px;
     bottom: 10%;
+  }
+  .home__blob-img {
+    width: 300px;
+    height: 300px;
   }
   .about__container {
     padding-top: 2rem;
@@ -542,8 +578,8 @@ img {
   .skills__container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
-    align-items: center;
-    text-align: initial;
+    /* align-items: center; */
+    text-align: left;
   }
   .work__container {
     grid-template-columns: repeat(3, 1fr);
@@ -560,6 +596,11 @@ img {
     padding: 10rem 0 2rem;
   }
   .home__img {
-    width: 450px;
+    width: 400px;
+  }
+
+  .home__blob-img {
+    width: 400px;
+    height: 400px;
   }
 }
